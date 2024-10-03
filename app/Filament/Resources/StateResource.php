@@ -15,6 +15,10 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+use Filament\Infolists\Infolist;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\Section;
+
 use function Laravel\Prompts\select;
 
 class StateResource extends Resource
@@ -73,6 +77,19 @@ class StateResource extends Resource
             ]);
     }
 
+    // public static function infolist(Infolist $infolist): Infolist
+    // {
+    //     return $infolist
+    //         ->schema([
+    //             Section::make('Employees info')
+    //                 ->schema([
+    //                     TextEntry::make('country.name'),
+    //                     TextEntry::make('name'),
+
+
+    //                 ])
+    //         ]);
+    // }
     public static function getRelations(): array
     {
         return [
